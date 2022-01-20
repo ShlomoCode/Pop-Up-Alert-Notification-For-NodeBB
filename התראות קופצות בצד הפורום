@@ -1,0 +1,8 @@
+socket.on("event:new_notification", function(data) {
+    app.alert({
+        title: "יש לך התראה חדשה",
+        message: data.bodyShort,
+        timeout: 3800,
+        type: "success",
+    });
+});
