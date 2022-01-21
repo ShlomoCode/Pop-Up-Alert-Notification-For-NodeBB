@@ -1,8 +1,21 @@
-socket.on("event:new_notification", function(data) {
-    app.alert({
-        title: "יש לך התראה חדשה",
-        message: data.bodyShort,
-        timeout: 3800,
-        type: "success",
-    });
+function notfiLang() {
+  switch (app.user.timeagoCode) {
+    case "he":
+      return "יש לך התראה חדשה";
+      break;
+    case "en":
+      return "have a new notification";
+      break;
+    default:
+      return "have a new notification";
+      break;
+  }
+}
+socket.on("event:new_notification", function (data) {
+  app.alert({
+    title: notfiLang(),
+    message: data.bodyShort,
+    timeout: 3800,
+    type: "success",
+  });
 });
