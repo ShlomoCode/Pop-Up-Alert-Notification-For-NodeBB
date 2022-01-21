@@ -20,6 +20,6 @@ socket.on("event:new_notification", function (data) {
     message: data.bodyShort,
     clickfn: OpenNotfiPath,
     timeout: 3800,
-    type: "success",
+    type: "info",
   });
 });
