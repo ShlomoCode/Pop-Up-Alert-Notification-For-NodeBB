@@ -6,7 +6,6 @@ socket.on("event:new_notification", function(data) {
         title: "[[notifications:new_notification]]",
         message: data.bodyShort,
         clickfn: OpenNotfiPath,
-        alert_id: "new_notification",
         timeout: 3800,
         type: "info",
     });
